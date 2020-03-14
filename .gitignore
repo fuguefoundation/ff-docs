@@ -1,0 +1,9 @@
+# Files
+source/sample.rst
+source/notes.md
+
+# Directories
+source/images/
+build/
+.vscode/
+tbd/
