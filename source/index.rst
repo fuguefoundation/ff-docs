@@ -10,6 +10,7 @@ Fugue Foundation
    partnership
    mission
    platform
+   api-docs
    appendix
 
 
