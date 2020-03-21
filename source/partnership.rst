@@ -30,11 +30,11 @@ Partners
 People and Nonprofits
 =====================
 
-TODO: Propose concept to partners, gain consent, and identify a project to fund
+TODO: Propose concept to partners and build out API
 
-- `David Goggins <https://davidgoggins.com/>`_
-- `Sam Harris <https://samharris.org/>`_
-- `AHA Foundation <https://www.theahafoundation.org>`_
+- `Effective Altruism <https://www.effectivealtruism.org//>`_
+- `Give Well <https://www.givewell.org/>`_
+- `Charity Navigator <https://www.charitynavigator.org/>`_
 
 ======================
 Environmental Programs

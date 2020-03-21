@@ -58,6 +58,23 @@ We use the word *comparative* loosely here. The projects funded by the Fugue Fou
 001
 ===
 
+| Title: *Doing Good Better*
+| Subtitle: *How Effective Altruism Can Help You Help Others, Do Work that Matters, and Make Smarter Choices about Giving Back*
+| Author: William MacAskill
+| Publisher: Avery
+| Published date: 8/2/2016
+| ISBN-13 number: 978-1592409662
+| Number of pages: 272
+| Retail list price: $12.89
+
+**Book description**: While a researcher at Oxford, William MacAskill decided to devote his study to a simple question: How can we do good better? MacAskill realized that, while most of us want to make a difference, we often decide how to do so based on assumptions and emotions rather than facts. As a result, our good intentions often lead to ineffective, sometimes downright harmful, outcomes.
+           
+As an antidote, MacAskill and his colleagues developed effective altruism—a practical, data-driven approach to doing good that allows us to make a tremendous difference regardless of our resources. Effective altruists operate by asking certain key questions that force them to think differently, set aside biases, and use evidence and careful reasoning rather than act on impulse. In Doing Good Better, MacAskill lays out these principles and shows that, when we use them correctly—when we apply the head and the heart to each of our altruistic endeavors—each of us has the power to do an astonishing amount of good.
+
+===
+002
+===
+
 | Title: *Can't Hurt Me*
 | Author: David Goggins
 | Publisher: Goggins Built Not Born, LLC
@@ -71,7 +88,7 @@ We use the word *comparative* loosely here. The projects funded by the Fugue Fou
 In Can't Hurt Me, he shares his astonishing life story and reveals that most of us tap into only 40% of our capabilities. Goggins calls this The 40% Rule, and his story illuminates a path that anyone can follow to push past pain, demolish fear, and reach their full potential.
 
 ===
-002
+003
 ===
 
 | Title: *Infidel*
@@ -89,7 +106,7 @@ Infidel shows the coming of age of this distinguished political superstar and ch
 Ultimately a celebration of triumph over adversity, Hirsi Ali’s story tells how a bright little girl evolves out of dutiful obedience to become an outspoken, pioneering freedom fighter. As Western governments struggle to balance democratic ideals with religious pressures, no other book could be more timely or more significant.
 
 ===
-003
+004
 ===
 
 | Title: *Waking Up: A Guide to Spirituality Without Religion*

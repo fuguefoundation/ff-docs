@@ -5,10 +5,10 @@ Fugue Foundation
    :maxdepth: 2
    :caption: Contents
 
-   book-proposal
-   book-chapter-abstract
-   partnership
    mission
+   book-proposal
+   partnership
+   grants
    platform
    api-docs
    appendix

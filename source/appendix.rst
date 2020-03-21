@@ -10,6 +10,10 @@ Definitions
 
 To have a productive conversation, we must first agree on terminology. Below are a list of key terms employed within the context and scope of the Fugue Foundation, and how we understand them.
 
+.. index:: ! Application Programming Interface
+.. _Application Programming Interface:
+**Application Programming Interface (API)** - An interface specific to an application allowing third parties to access certain data resources. It abstracts the underlying implementation (such as a dataset) and exposes objects or actions that a developer may need.
+
 .. index:: ! Blockchain
 .. _Blockchain:
 **Blockchain** - A public, decentralized, permission-ledger distributed across a peer-to-peer network and validated by a consensus algorithm. The Fugue Foundation develops on the Ethereum blockchain.
@@ -32,6 +36,10 @@ labour, decision making, and financial management into their applications.
 .. _Decentralized Autonomous Organization:
 **Decentralized Autonomous Organization (DAO)** - An organization represented by rules encoded within a smart contract and controlled by shareholders of a digital asset (token) and not influenced by a central authority.
 
+.. index:: ! Effective Altruism
+.. _Effective Altruism:
+**Effective Altruism** - The act of considering evidence and analysis to determine how we can effectively use resources to help others the most.
+
 .. index:: ! Ethereum
 .. _Ethereum:
 **Ethereum** - A global, open-source platform for decentralized applications. Ether (ETH) is the native token or cryptocurrency for the Ethereum network.
@@ -39,6 +47,10 @@ labour, decision making, and financial management into their applications.
 .. index:: ! Fugue
 .. _Fugue:
 **Fugue** - From the latin for `fleeing, to take flight`. A style of classical music composition where melodic subjects and counter-subjects interact with one another according to certain rules. Best advice, listen to Johann Sebastian Bach.
+
+.. index:: ! Non-fungible Token
+.. _Non-fungible Token:
+**Non-fungible Token** - Based off the ERC721 specification, it is a crytographically unique, mutually non-interchangeable token.
 
 .. index:: ! Smart contract
 .. _Smart contract:

@@ -4,50 +4,37 @@
 Platform
 ########
 
-*The Fugue Foundation prototype dApp is under development*
+*The Fugue Foundation dApp and API are under development*
 
-Visit our homepage at `fuguefoundation.org <https://fuguefoundation.org>`_ or our `Github repository <https://github.com/fuguefoundation>`_ for more information.
+Visit our homepage at `fuguefoundation.org <https://fuguefoundation.org>`_ or our `Github repos <https://github.com/fuguefoundation>`_ for more information.
 
-**************
-About the dApp
-**************
+****************
+Project Overview
+****************
 .. index:: ! Decentralized Application
-.. index:: ! Decentralized Autonomous Organization
-.. index:: ! Colony.io
 .. index:: ! Ethereum
+.. index:: ! Application Programming Interface
+.. index:: ! Non-fungible Token
+.. index:: ! Effective Altruism
 
-The Fugue Foundation platform is built on the Ethereum Network. 
+The Fugue Foundation manages a few open source projects, which combine together to create an Ethereum-based donation platform guided by the principles of effective altruism.
 
-Colony is a protocol for a new type of open, meritocratic organization that operates via software rather than paperwork and management hierarchy. A colony is a set of smart contracts on the Ethereum blockchain that contains all of the normal functions of a traditional firm, as well as some new functions that are only possible using a decentralized platform. Using the functions built into Colony, an organization can do:
+Insert diagram flow
 
-* Decision making
-* Ownership
-* Reputation
-* Dispute resolution
-* Work management and delegation
-* Financial management
+When a user visits the decentralized application (dApp), the page queries a dataset of nonprofit organizations through an application programming interface (API) and populates four selections. These are three groupings (plus one create-your-own option) of nonprofits based on the criteria of certain charity evaluator organizations such as Give Well, Charity Navigator, and Effective Altruism (see :ref:`ref-partnership`). The user then selects one of these options and sends ether or any ERC20 token to the dApp. Through the logic encoded in the Fugue Foundation smart contracts deployed the Ethereum blockchain, the donation is split among the chosen nonprofits and the user is rewarded with a non-fungible token (NFT). 
 
-*****************
-How does it work?
-*****************
-.. index:: ! Stable coins
+****
+dApp
+****
 
-See :ref:`ref-partnership` for discussion of crypto incentives and eligibility criteria for participants.
+* Angular 9
+* Truffle
+* Open Zeppelin
 
-* TODO: Wiki (Github)
-* TODO: FAQ (Github)
+***
+API
+***
 
-The smallest conceptual unit within a Colony is a task. A task is a discrete unit of work which requires no further subdivision or delegation, and which can be evaluated as complete or incomplete based on some set of criteria. Every task has three roles associated with it - Manager, Evaluator, Worker - which determine permissions for editing the task, submitting work, and ratings for performance.
-
-=======
-Example
-=======
-
-TODO
-
-*****
-Setup
-*****
-
-* TODO: Wiki (Github)
-* TODO: FAQ (Github)
+* MongoDB
+* Node.js
+* Express
