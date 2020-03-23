@@ -64,19 +64,6 @@ labour, decision making, and financial management into their applications.
 .. _United Nations Sustainable Development Goals:
 **United Nations Sustainable Development Goals (UNSDG)** - A blueprint to achieve a better and more sustainable future for all. They address the global challenges we face, including those related to poverty, inequality, climate change, environmental degradation, peace and justice. The 17 Goals are all interconnected, and in order to leave no one behind, the United Nations believes it is important that we achieve them all by 2030.
 
-************
-Query Letter
-************
-
-TODO
-
-- Personalization: where you customize the letter for the recipient
-- What you’re selling: genre/category, anticipated word count, title/subtitle
-- What makes your book unique—or its unique selling proposition (hook)
-- Target readership: who will buy this book and why? (it cannot be everyone and anyone)
-- Your bio, platform and credentials to write the book
-- Thank you and closing
-
 *******
 Contact
 *******

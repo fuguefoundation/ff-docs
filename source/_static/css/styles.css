@@ -10,10 +10,14 @@
 .wy-side-nav-search, .wy-nav-top {
     background-color: #b31121;
 }
-a:visited.reference.internal, a:visited.reference.external {
+a:visited.reference.internal, a:visited.reference.external, 
+a.reference.internal, a.reference.external {
     color: #b31121;
 }
 
 p, ul.simple li, ol.simple li {
    font-size: 18px;
+}
+.highlight {
+    background: #efefef;
 }

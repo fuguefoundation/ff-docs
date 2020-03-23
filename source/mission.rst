@@ -8,7 +8,7 @@ Fugue Foundation
 Mission Statement
 *****************
 
-A better world through decentralized and globally inclusive technology.
+A better world through inclusive, decentralized technology.
 
 ***************
 Core Principles
@@ -18,6 +18,9 @@ Core Principles
 * Facilitating personal empowerment, freedom of thought, and self-sovereignty
 * Encouraging good stewardship of the planet and its limited natural resources
 * Creating an internet that is open, borderless, privacy-centric, censorship resistant and decentralized
+* Applying tenants of effective altruism to achieve maximum impact
+
+.. image:: _static/group-cliff.png
 
 ***************
 Strategic Goals
@@ -31,14 +34,15 @@ Strategic Goals
 
 * Almost 50% of the world's population lives on less than 2.50 USD per day. There are many complicated reasons for this - economics, over-population, lack of quality education, epidemic diseases, environmental problems - but at the root of it lies a question of employment. We believe that the development and administration of blockchain-based technology will be a key resource and value distribution mechanism for tomorrow's workforce. It is imperative to help onboard organizations and users alike into this new digital economy. But to get there, and to bring everyone along for the ride, it will take more than awareness, training, and determination. It will take practical applications for the technology itself to prove its utility, along with a new generation of developers with the necessary skillset to support and innovate these apps, filling a void where current solutions prove ineffective or insufficient.
 
-
 *************
 Key Resources
 *************
 .. index:: ! Blockchain
+.. index:: ! Application Programming Interface
 
 *Fugue Foundation is a private foundation and is presently not seeking public donation.*
 
+* See :ref:`ref-platform` to see some of the open source projects we are developing.
 * Decentralized finance and governance models through blockchain technology are cutting edge resources that enable personal liberty and self-sovereignty. The Fugue Foundation will utilize these tools whenever possible.
 * Books, and memoirs from living authors in particular, will be a critical educational use case for the Fugue Foundation decentralized application (dApp). Memoirs by authors that are relatable from the perspective of the reader, that portray stories of triumph over adversity and present solutions for future action at various levels of engagement are our first target. See :ref:`ref-partnership`
 * Self-organizing principles
@@ -47,7 +51,7 @@ Key Resources
 Measuring Impact
 ****************
 
-TODO
+TODO - Effective altruism
 
 ********
 Road map
@@ -60,6 +64,7 @@ Road map
 
 * Change domicile of FF nonprofit from Arizona to Wyoming
 * Establish board and file for 501(c)(3) tax exempt status
+* Complete dApp and API
 * Test Colony prototype dapp
 * Complete book proposal and decide on best method for distribution and publication
 * Contact partners regarding project funding
@@ -70,6 +75,7 @@ Long Term
 =========
 
 * Publish and Launch
+* Expand capabilities of API
 * Align with UN Strategic Development Goals
 * Work on expansion strategies (new learning tracks, internships, increasing decentralization of org structure)
 
@@ -83,32 +89,3 @@ Fugue Foundation is a private nonprofit organization formed on February 27, 2018
 	| c/o KEYTLaw, LLC
 	| 7373 East Doubletree Ranch Road, Suite 165
 	| Scottsdale, Arizona 85258
-
-***********
-Partnership
-***********
-
-We see partnership both in terms of virtual space (through the decentralized internet and blockchain technology) and physical space, through alignment with nonprofits that share our vision and principles.
-
-=======================
-Nonprofit Organizations
-=======================
-
-We welcome partnership with nonprofit organizations and inspiring thought leaders who share our vision.
-
-* `AHA Foundation <https://www.theahafoundation.org/>`_
-* `UNICEF and blockchain <http://unicefstories.org/tag/blockchain/>`_
-* `Give Directly <https://www.givedirectly.org/>`_
-* `Pineapple Fund <https://pineapplefund.org/>`_
-
-==================
-Tech Organizations
-==================
-
-We seek partnerships within the blockchain community with those that shares our vision of an open, borderless, inclusive, and decentralized internet. 
-
-* `Colony <https://colony.io/>`_
-* `Giveth <https://giveth.io/>`_
-* `Alice <https://alice.si/>`_
-* `Gitcoin <https://gitcoin.co/>`_
-* `Ethereum Community Fund <https://ecf.network/>`_

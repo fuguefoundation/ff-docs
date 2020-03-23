@@ -6,13 +6,12 @@ Fugue Foundation
    :caption: Contents
 
    mission
-   book-proposal
    partnership
-   grants
    platform
    api-docs
    appendix
 
+.. image:: _static/logo.png
 
 .. * :ref:`modindex`
 .. * :ref:`search`
