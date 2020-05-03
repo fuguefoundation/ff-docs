@@ -5,7 +5,7 @@ API Docs
 ########
 .. index:: ! Application Programming Interface
 
-*API details, endpoint urls, and specification is a work in progress*
+See `API Github repo <https://github.com/fuguefoundation/ff-api>`_ for code base. *Docs under development*
 
 **********
 nonprofits
@@ -15,17 +15,18 @@ nonprofits
 
     Schema({
         _id: mongoose.Schema.Types.ObjectId,
-        classifier: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Classifier',
-            require: true
-        },
         name: {type: String, required: true},
         url: {type: String, required: true},
-        image: {type: String, required: true},
+        address: {type: String, required: true},
         logo: {type: String, required: true},
-        desc: {type: String, required: true},
+        image: {type: String, required: true},
         short_desc: {type: String, required: true},
+        desc: {type: String, required: true},
+        evaluatorId: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Evaluator',
+            require: true
+        },
         stats: { 
             metric1: Number, 
             metric2: Number
@@ -43,7 +44,7 @@ Get JSON array of nonprofits
 REQUEST
 -------
 
-GET https://fuguefoundation.org/nonprofits
+GET /api/v0/nonprofits
 
 =======  ======
 REQUEST  PARAMS
@@ -56,7 +57,7 @@ EXAMPLE
 .. code-block:: javascript
 
     // GET
-    curl "https://fuguefoundation.org/nonprofits"
+    curl /api/v0/nonprofits
 
 --------
 RESPONSE
@@ -67,7 +68,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 ======  ======
 RESULT  FIELDS
 ======  ======
-name    name of the object
+Object  {count: number, nonprofits: [{}]}
 ======  ======
 
 BODY
@@ -87,12 +88,12 @@ Get JSON of nonprofit by id
 REQUEST
 -------
 
-GET https://fuguefoundation.org/nonprofits/:id
+GET /api/v0/nonprofits/:id
 
 =======  ======
 REQUEST  PARAMS
 =======  ======
-id       example
+id       string
 =======  ======
 
 EXAMPLE
@@ -100,7 +101,7 @@ EXAMPLE
 .. code-block:: javascript
 
     // GET
-    curl "https://fuguefoundation.org/nonprofits/example"
+    curl /api/v0/nonprofits/:id
 
 --------
 RESPONSE
@@ -111,7 +112,7 @@ On success, the call to this endpoint will return with 200 and the following bod
 ======  ======
 RESULT  FIELDS
 ======  ======
-name    name of the object
+Object  {nonprofit: {}, request: {}}
 ======  ======
 
 BODY
@@ -125,62 +126,50 @@ POST nonprofit
 ==============
 /api/v0/nonprofits
 
-Get JSON of nonprofit by id
+Post JSON of nonprofit
 
 -------
 REQUEST
 -------
 
-GET https://fuguefoundation.org/nonprofits
-
-=======  ======
-REQUEST  PARAMS
-=======  ======
-id       example
-=======  ======
-
-EXAMPLE
-
-.. code-block:: javascript
-
-    // GET
-    curl "https://fuguefoundation.org/nonprofits/example"
+POST /api/v0/nonprofits
 
 --------
 RESPONSE
 --------
 
-On success, the call to this endpoint will return with 200 and the following body:
-
-======  ======
-RESULT  FIELDS
-======  ======
-name    name of the object
-======  ======
+On success, the call to this endpoint will return with 201 and the following body:
 
 BODY
 
 .. code-block:: javascript
 
-    This endpoint returns a `text/plain` response body.
+    createdNonprofit: {
+        name: result.name,                  
+        _id: result._id,
+        request: {
+            type: 'GET',
+            url: 'api/v0/nonprofits/' + result._id
+        }
+    }
 
 ===================
 PATCH /:nonprofitId
 ===================
-/api/v0/nonprofits
+/api/v0/nonprofits/:id
 
-Get JSON of nonprofit by id
+Patch JSON of nonprofit by id
 
 -------
 REQUEST
 -------
 
-GET https://fuguefoundation.org/nonprofits
+PATCH /api/v0/nonprofits/:id
 
 =======  ======
 REQUEST  PARAMS
 =======  ======
-id       example
+id       string
 =======  ======
 
 EXAMPLE
@@ -196,43 +185,36 @@ RESPONSE
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-======  ======
-RESULT  FIELDS
-======  ======
-name    name of the object
-======  ======
-
 BODY
 
 .. code-block:: javascript
 
-    This endpoint returns a `text/plain` response body.
+    {
+        message: 'Nonprofit updated',
+        request: {
+            type: 'GET',
+            url: 'api/v0/nonprofits/' + id
+        }
+    }
 
 ====================
 DELETE /:nonprofitId
 ====================
-/api/v0/nonprofits/:nonprofitId
+/api/v0/nonprofits/:id
 
-Get JSON of nonprofit by id
+Delete JSON of nonprofit by id
 
 -------
 REQUEST
 -------
 
-GET https://fuguefoundation.org/nonprofits
+DELETE /api/v0/nonprofits/:id
 
 =======  ======
 REQUEST  PARAMS
 =======  ======
-id       example
+id       string
 =======  ======
-
-EXAMPLE
-
-.. code-block:: javascript
-
-    // GET
-    curl "https://fuguefoundation.org/nonprofits/example"
 
 --------
 RESPONSE
@@ -240,21 +222,24 @@ RESPONSE
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-======  ======
-RESULT  FIELDS
-======  ======
-name    name of the object
-======  ======
-
 BODY
 
 .. code-block:: javascript
 
-    This endpoint returns a `text/plain` response body.
+    {
+        message: 'Nonprofit deleted',
+        request: {
+            type: 'POST',
+            url: 'api/v0/nonprofits',
+            body: { name: 'String', url: 'String', address: 'String', url: 'String', image: 'String', 
+            logo: 'String', desc: 'String', short_desc: 'String', evaluatorId: 'String',
+            stats: {metric1: 'Number', metric2: 'Number'}}
+        }
+    }
 
-***********
-classifiers
-***********
+**********
+evaluators
+**********
 
 .. code-block:: javascript
 
@@ -264,27 +249,28 @@ classifiers
         url: {type: String, required: true},
         image: {type: String, required: true},
         logo: {type: String, required: true},
-        desc: {type: String, required: true},
-        short_desc: {type: String, required: true}
+        focus: {type: String, required: true},
+        short_desc: {type: String, required: true},
+        desc: {type: String, required: true}
     });
 
-===============
-GET classifiers
-===============
-/api/v0/classifiers
+==============
+GET evaluators
+==============
+/api/v0/evaluators
 
-Get JSON array of classifiers
+Get JSON array of evaluators
 
 -------
 REQUEST
 -------
 
-GET https://fuguefoundation.org/classifiers
+GET /api/v0/evaluators
 
 =======  ======
 REQUEST  PARAMS
 =======  ======
-none
+none     none
 =======  ======
 
 EXAMPLE
@@ -292,7 +278,7 @@ EXAMPLE
 .. code-block:: javascript
 
     // GET
-    curl "https://fuguefoundation.org/classifiers"
+    curl /api/v0/evaluators
 
 --------
 RESPONSE
@@ -303,32 +289,45 @@ On success, the call to this endpoint will return with 200 and the following bod
 ======  ======
 RESULT  FIELDS
 ======  ======
-name    name of the object
+Object  {count: number, evaluators: [{}]}
 ======  ======
 
 BODY
 
 .. code-block:: javascript
 
-    This endpoint returns a `text/plain` response body.
+    {
+        _id: result._id,
+        name: result.name,
+        url: result.url,
+        logo: result.logo,
+        image: result.image,
+        focus: result.focus,
+        short_desc: result.short_desc,
+        desc: result.desc,
+        request: {
+            type: 'GET',
+            url: 'api/v0/evaluators/' + result._id
+        }
+    }
 
-==================
-GET /:classifierId
-==================
-/api/v0/classifiers/:id
+=================
+GET /:evaluatorId
+=================
+/api/v0/evaluators/:id
 
-Get JSON of classifier by id
+Get JSON of evaluator by id
 
 -------
 REQUEST
 -------
 
-GET https://fuguefoundation.org/classifiers/:id
+GET /api/v0/evaluators/:id
 
 =======  ======
 REQUEST  PARAMS
 =======  ======
-id       example
+id       string
 =======  ======
 
 EXAMPLE
@@ -336,7 +335,7 @@ EXAMPLE
 .. code-block:: javascript
 
     // GET
-    curl "https://fuguefoundation.org/classifiers/example"
+    curl /api/v0/evaluators/:id
 
 --------
 RESPONSE
@@ -344,43 +343,72 @@ RESPONSE
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-======  ======
-RESULT  FIELDS
-======  ======
-name    name of the object
-======  ======
-
 BODY
 
 .. code-block:: javascript
 
-    This endpoint returns a `text/plain` response body.
+    {
+        evaluator: result,
+        request: {
+            type: 'GET',
+            description: 'Get all evaluators',
+            url: 'api/v0/evaluators'
+        }
+    }
 
-===============
-POST classifier
-===============
-/api/v0/classifiers
+==============
+POST evaluator
+==============
+/api/v0/evaluators
 
-Get JSON of classifier by id
+Post JSON of evaluator
 
 -------
 REQUEST
 -------
 
-GET https://fuguefoundation.org/classifiers
+POST /api/v0/evaluators
+
+--------
+RESPONSE
+--------
+
+On success, the call to this endpoint will return with 201 and the following body:
+
+BODY
+
+.. code-block:: javascript
+
+    {
+        message: "New evaluator created",
+        createdEvaluator: {
+            _id: result._id,
+            name: result.name,
+            request: {
+                type: 'GET',
+                url: '/api/v0/evaluators/' + result._id
+            }
+        }
+    }
+
+===================
+PATCH /:evaluatorId
+===================
+/api/v0/evaluators/:id
+
+Patch JSON of evaluator by id
+
+-------
+REQUEST
+-------
+
+PATCH /api/v0/evaluators/:id
 
 =======  ======
 REQUEST  PARAMS
 =======  ======
-id       example
+id       string
 =======  ======
-
-EXAMPLE
-
-.. code-block:: javascript
-
-    // GET
-    curl "https://fuguefoundation.org/classifiers/example"
 
 --------
 RESPONSE
@@ -388,43 +416,36 @@ RESPONSE
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-======  ======
-RESULT  FIELDS
-======  ======
-name    name of the object
-======  ======
-
 BODY
 
 .. code-block:: javascript
 
-    This endpoint returns a `text/plain` response body.
+    {
+        message: 'Evaluator updated',
+        request: {
+            type: 'GET',
+            url: 'api/v0/evaluators/' + id
+        }
+    }
 
 ====================
-PATCH /:classifierId
+DELETE /:evaluatorId
 ====================
-/api/v0/classifiers
+/api/v0/evaluators/:id
 
-Get JSON of classifier by id
+Delete JSON of evaluator by id
 
 -------
 REQUEST
 -------
 
-GET https://fuguefoundation.org/classifiers
+DELETE /api/v0/evaluators/:id
 
 =======  ======
 REQUEST  PARAMS
 =======  ======
-id       example
+id       string
 =======  ======
-
-EXAMPLE
-
-.. code-block:: javascript
-
-    // GET
-    curl "https://fuguefoundation.org/classifiers/example"
 
 --------
 RESPONSE
@@ -432,58 +453,16 @@ RESPONSE
 
 On success, the call to this endpoint will return with 200 and the following body:
 
-======  ======
-RESULT  FIELDS
-======  ======
-name    name of the object
-======  ======
-
 BODY
 
 .. code-block:: javascript
 
-    This endpoint returns a `text/plain` response body.
-
-=====================
-DELETE /:classifierId
-=====================
-/api/v0/classifiers/:classifierId
-
-Get JSON of classifier by id
-
--------
-REQUEST
--------
-
-GET https://fuguefoundation.org/classifiers
-
-=======  ======
-REQUEST  PARAMS
-=======  ======
-id       example
-=======  ======
-
-EXAMPLE
-
-.. code-block:: javascript
-
-    // GET
-    curl "https://fuguefoundation.org/classifiers/example"
-
---------
-RESPONSE
---------
-
-On success, the call to this endpoint will return with 200 and the following body:
-
-======  ======
-RESULT  FIELDS
-======  ======
-name    name of the object
-======  ======
-
-BODY
-
-.. code-block:: javascript
-
-    This endpoint returns a `text/plain` response body.
+    {
+        message: 'Evaluator deleted',
+        request: {
+            type: 'POST',
+            url: 'api/v0/evaluators',
+            body: { name: 'String', url: 'String', image: 'String', 
+            logo: 'String', desc: 'String', short_desc: 'String'}
+        }
+    }

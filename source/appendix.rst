@@ -18,6 +18,10 @@ To have a productive conversation, we must first agree on terminology. Below are
 .. _Blockchain:
 **Blockchain** - A public, decentralized, permission-ledger distributed across a peer-to-peer network and validated by a consensus algorithm. The Fugue Foundation develops on the Ethereum blockchain.
 
+.. index:: ! Charity Assessment
+.. _Charity Assessment:
+**Charity Assessment** - The process of analysis of the "goodness" of a nonprofit organization in financial terms. Historically, charity evaluators have focused on the question of how much of contributed funds are used for the purpose(s) claimed by the charity, while more recently some evaluators have placed an emphasis on the cost effectiveness (or impact) of charities. The Fugue Foundation is presently following those assessments that utilize effective altruism criteria.
+
 .. index:: ! Colony.io
 .. _Colony.io:
 **Colony.io** - Colony is the people layer of the decentralised protocol stack –— an emerging collection of technologies built on Ethereum, which provide open, permissionless protocols for developers to create
@@ -59,10 +63,6 @@ labour, decision making, and financial management into their applications.
 .. index:: ! Stable coins
 .. _Stable coins:
 **Stable coins** - A cryptocurrency that is pegged to another more stable asset, like gold or the U.S. dollar. DAI and USDC are examples of a stable coin.
-
-.. index:: ! United Nations Sustainable Development Goals
-.. _United Nations Sustainable Development Goals:
-**United Nations Sustainable Development Goals (UNSDG)** - A blueprint to achieve a better and more sustainable future for all. They address the global challenges we face, including those related to poverty, inequality, climate change, environmental degradation, peace and justice. The 17 Goals are all interconnected, and in order to leave no one behind, the United Nations believes it is important that we achieve them all by 2030.
 
 *******
 Contact

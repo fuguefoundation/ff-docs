@@ -11,7 +11,8 @@
     background-color: #b31121;
 }
 a:visited.reference.internal, a:visited.reference.external, 
-a.reference.internal, a.reference.external {
+a.reference.internal, a.reference.external, ul.wy-breadcrumbs li a, 
+ul.wy-breadcrumbs li.wy-breadcrumbs-aside a, footer a {
     color: #b31121;
 }
 
@@ -20,4 +21,11 @@ p, ul.simple li, ol.simple li {
 }
 .highlight {
     background: #efefef;
+}
+div.wy-menu p.caption span.caption-text {
+    color: white;
+}
+ul li.toctree-l1 a {
+    text-shadow: 1px 1px 1px #ffffff;
+    letter-spacing: 2px;
 }

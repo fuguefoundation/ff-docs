@@ -1,6 +1,8 @@
 Fugue Foundation
 ================
 
+.. image:: _static/logo.png
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents
@@ -10,8 +12,6 @@ Fugue Foundation
    platform
    api-docs
    appendix
-
-.. image:: _static/logo.png
 
 .. * :ref:`modindex`
 .. * :ref:`search`
