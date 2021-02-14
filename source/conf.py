@@ -50,7 +50,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'Fugue Foundation'
 copyright = u'2020, Fugue Foundation'
-author = u'David Houston'
+author = u'Fugue Foundation'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -226,8 +226,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'FugueFoundation.tex', u'Altruism 2.0: A meta-guide for charity in a cryptic world',
-   u'David Houston', 'manual'),
+  (master_doc, 'FugueFoundation.tex', u'Prospectus',
+   u'Fugue Foundation', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

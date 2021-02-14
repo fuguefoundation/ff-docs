@@ -68,14 +68,31 @@ On success, the call to this endpoint will return with 200 and the following bod
 ======  ======
 RESULT  FIELDS
 ======  ======
-Object  {count: number, nonprofits: [{}]}
+Array   [{nonprofits}]}
 ======  ======
 
 BODY
 
+This endpoint returns a `text/json` response body.
+
 .. code-block:: javascript
 
-    This endpoint returns a `text/plain` response body.
+    [{
+        id: result.id,
+        name: result.name,
+        url: result.url,
+        address: result.address,
+        logo: result.logo,
+        image: result.image,
+        short_desc: result.short_desc,
+        desc: result.desc,
+        evaluatorId: result.evaluatorId,
+        stats: result.stats,
+        request: {
+            type: 'GET',
+            url: 'api/v0/nonprofits/' + result.id
+        }
+    }]
 
 =================
 GET /:nonprofitId
@@ -112,14 +129,14 @@ On success, the call to this endpoint will return with 200 and the following bod
 ======  ======
 RESULT  FIELDS
 ======  ======
-Object  {nonprofit: {}, request: {}}
+Object  {nonprofit}
 ======  ======
 
 BODY
 
 .. code-block:: javascript
 
-    This endpoint returns a `text/plain` response body.
+    This endpoint returns a `text/json` response body.
 
 ==============
 POST nonprofit
@@ -289,15 +306,15 @@ On success, the call to this endpoint will return with 200 and the following bod
 ======  ======
 RESULT  FIELDS
 ======  ======
-Object  {count: number, evaluators: [{}]}
+Array   [{evaluators}]
 ======  ======
 
 BODY
 
 .. code-block:: javascript
 
-    {
-        _id: result._id,
+    [{
+        id: result._id,
         name: result.name,
         url: result.url,
         logo: result.logo,
@@ -309,7 +326,7 @@ BODY
             type: 'GET',
             url: 'api/v0/evaluators/' + result._id
         }
-    }
+    }]
 
 =================
 GET /:evaluatorId
@@ -343,12 +360,25 @@ RESPONSE
 
 On success, the call to this endpoint will return with 200 and the following body:
 
+======  ======
+RESULT  FIELDS
+======  ======
+Object  {evaluator}
+======  ======
+
 BODY
 
 .. code-block:: javascript
 
     {
-        evaluator: result,
+        id: result.id,
+        name: result.name,
+        url: result.url,
+        logo: result.logo,
+        image: result.image,
+        focus: result.focus,
+        short_desc: result.short_desc,
+        desc: result.desc,
         request: {
             type: 'GET',
             description: 'Get all evaluators',
