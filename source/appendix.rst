@@ -22,12 +22,6 @@ To have a productive conversation, we must first agree on terminology. Below are
 .. _Charity Assessment:
 **Charity Assessment** - The process of analysis of the "goodness" of a nonprofit organization in financial terms. Historically, charity evaluators have focused on the question of how much of contributed funds are used for the purpose(s) claimed by the charity, while more recently some evaluators have placed an emphasis on the cost effectiveness (or impact) of charities. The Fugue Foundation is presently following those assessments that utilize effective altruism criteria.
 
-.. index:: ! Colony.io
-.. _Colony.io:
-**Colony.io** - Colony is the people layer of the decentralised protocol stack –— an emerging collection of technologies built on Ethereum, which provide open, permissionless protocols for developers to create
-sophisticated products without having to build complex backend software. The Colony Protocol allows developers to integrate decentralised and self regulating division of
-labour, decision making, and financial management into their applications.
-
 .. index:: ! Cryptocurrency
 .. _Cryptocurrency:
 **Cryptocurrency** - A digital asset designed as a medium of exchange using blockchain technology. Although there are hundreds of such currencies, as of this writing the Fugue Foundation is primarily interested in Ether (ETH), ERC-20 stable coins such as DAI and USDC, and Bitcoin (BTC).
